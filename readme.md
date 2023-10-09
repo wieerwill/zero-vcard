@@ -4,15 +4,15 @@ This projects uses a single RaspberryPi Zero (v1) and a Waveshare 2.13" display,
 ! Disclaimer: The libraries used here are not made by me. Those are the original library files from Waveshare (see below for sources). Any modifications will be annoted.
 
 ## Next Steps and Roadmap
--[x] Text Examples: show single and multiple line texts
--[x] Image Examples: show pictures and modify pictures before show
--[x] Draw Examples: draw lines, circles and rectangles
--[x] Simple Card: a digital vCard you can always carry along and show off
--[x] Slideshow: Show multiple slides in a row repeatingly
--[ ] Partial Display Updates: only update partial display parts instead the whole screen
--[x] digital vCard with multiple pages, sliding and QR Codes
--[ ] start scripts with autostart while booting up
--[ ] get and show different RaspberryPi Stats
+- [x] Text Examples: show single and multiple line texts
+- [x] Image Examples: show pictures and modify pictures before show
+- [x] Draw Examples: draw lines, circles and rectangles
+- [x] Simple Card: a digital vCard you can always carry along and show off
+- [x] Slideshow: Show multiple slides in a row repeatingly
+- [ ] Partial Display Updates: only update partial display parts instead the whole screen
+- [x] digital vCard with multiple pages, sliding and QR Codes
+- [x] start scripts with autostart while booting up
+- [ ] get and show different RaspberryPi Stats
 
 ## Set up your RPi
 For the 2.13" display the RaspberryPi Zero fits perfect as they match each others size quite well. 
@@ -69,6 +69,13 @@ make
 - \c_lib\GUI\: basic image processing functions
 - \c_lib\Fonts\: for some commonly used ascii fonts
 - \c_lib\E-paper\: the ink screen driver functions
+
+## Autostart
+to autostart any of your programms you can choose between different options:
+1. cron: set a crontab lik `@reboot python3 /home/user/vcard.py`
+2. bashrc: add to your local bashrc: `python3 /home/user/vcard.py`
+
+make sure to only start one programm that accesses your display!
 
 ## Sources
 Display drivers and information from [Waveshare Wiki](https://www.waveshare.com/wiki/2.13inch_e-Paper_HAT)
